@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #welcome-text {
+            position: absolute;
+            top: 20px;
+            left: 50px;
+            border: 1px solid red;
+            z-index: -100;
+        }
+        #close-button {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+        }
+        #popup {
+            position: absolute;
+            top: 150px;
+            right: 150px;
+            background-color: aquamarine;
+            padding: 30px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div style="position:static;">
+        <button>
+            my button1
+        </button>
+    </div>
+    <button id="close-button">
+        x
+    </button>
+
+    <input/>
+
+    <div id="welcome-text">
+        Hello there. What is your name?
+        <div>
+            <span style="color:green;">He</span>llo.        
+        </div>
+        <div>
+            Kitten
+        </div>
+    </div>
+
+    <div style="color:red;">
+        <span style="color:green;">He</span>llo.        
+    </div>
+
+
+    <div id="popup">
+        <button style="position:absolute;top:8px;right:8px;">x</button>
+        Do you undestand?
+        <div>
+            <button>yes</button>
+        </div>
+
+        <div>
+            <button>no</button>
+        </div>
+    </div>
+</body>
+</html>
