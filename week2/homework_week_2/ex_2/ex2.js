@@ -19,6 +19,20 @@ function main(astronaughtsInSpace) {
     // el.innerText = ... to set text
     // document.body.appendChild(...) to add some element to the <body>
 
+    // additional exercise, if an astronaught is on the ISS, set the div
+    // background-color to 'lightgreen' otherwise set it to 'lightblue'
+    // hint: you can use the === operator to check their craft
+    // example:
+    /*
+     * for (const astronaught of astronaughtsInSpace) {
+     *   if (astronaught.craft === 'ISS') {
+     *     ...
+     *   } else {
+     *     ...
+     *   }
+     *
+     * }
+     */
 
     // end exercise
 }

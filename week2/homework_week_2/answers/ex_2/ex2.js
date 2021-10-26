@@ -26,6 +26,11 @@ function main(astronaughtsInSpace) {
         const sentence = astronaught.name + ' is on the ' + astronaught.craft + ' craft';
         const el = document.createElement('div');
         el.innerText = sentence;
+        if (astronaught.craft === 'ISS') {
+            el.style.backgroundColor = 'lightgreen';
+        } else {
+            el.style.backgroundColor = 'lightblue';
+        }
         document.body.appendChild(el);
     }
 
