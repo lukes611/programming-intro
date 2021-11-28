@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Enter your color</h4>
+    <input id="color-input"/>
+    <button id="send-button">send</button>
+    <script>
+        const inputEl = document.getElementById('color-input');
+        const button = document.getElementById('send-button');
+        button.onclick = () => {
+            const val = inputEl.value;
+            console.log('going to send', val, 'to the server');
+            fetch('save-color?color=' + val)
+        };
+
+        setInterval(() => {
+            fetch('/get-color')
+                .then(resp => resp.json())
+                .then(data => {
+                    console.log(data);
+                    document.body.style.backgroundColor = data.color;
+                });
+        }, 1000);
+    </script>
+</body>
+</html>
